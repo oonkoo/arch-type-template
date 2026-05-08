@@ -11,9 +11,26 @@ const manropeHeading = Manrope({ subsets: ["latin"], variable: "--font-heading" 
 const publicSans = Public_Sans({ subsets: ["latin"], variable: "--font-sans" })
 const fontMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
+const faviconHref = `/company/${activeCompany.slug}/favicon.svg`
+const ogImageHref = `/company/${activeCompany.slug}/og-image.jpg`
+
 export const metadata: Metadata = {
   title: activeCompany.name,
   description: activeCompany.description,
+  icons: {
+    icon: [{ url: faviconHref, type: "image/svg+xml" }],
+  },
+  openGraph: {
+    title: activeCompany.name,
+    description: activeCompany.description,
+    images: [ogImageHref],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: activeCompany.name,
+    description: activeCompany.description,
+    images: [ogImageHref],
+  },
 }
 
 export default function RootLayout({
