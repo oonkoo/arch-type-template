@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(python *)",
+      "WebFetch(domain:6ixdevinc.com)",
+      "Bash(node *)",
+      "Bash(npx tsc *)"
+    ]
+  }
+}
